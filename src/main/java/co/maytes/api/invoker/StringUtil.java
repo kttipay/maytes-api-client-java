@@ -16,7 +16,7 @@ package co.maytes.api.invoker;
 import java.util.Collection;
 import java.util.Iterator;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-14T10:59:00.486651+10:00[Australia/Sydney]", comments = "Generator version: 7.22.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).

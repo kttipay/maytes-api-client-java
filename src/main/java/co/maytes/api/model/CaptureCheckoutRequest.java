@@ -51,7 +51,7 @@ import co.maytes.api.invoker.JSON;
 /**
  * CaptureCheckoutRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2026-09-14T10:59:00.486651+10:00[Australia/Sydney]", comments = "Generator version: 7.22.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CaptureCheckoutRequest {
   public static final String SERIALIZED_NAME_MERCHANT_ORDER_ID = "merchant_order_id";
   @SerializedName(SERIALIZED_NAME_MERCHANT_ORDER_ID)
