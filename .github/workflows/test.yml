@@ -1,0 +1,35 @@
+# Verifies the mirrored client actually compiles on the JDKs a consumer is
+# likely to build with. Nothing publishes this artifact to Maven Central, so a
+# consumer builds it FROM THIS REPO (mvn install, or JitPack) — which makes a
+# compile failure here a broken release in the only sense that applies.
+#
+# This file is generated — edit it at sdks/backend-sdk/mirror/java/ in the
+# api-ts-v3 monorepo, not here.
+
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: JDK ${{ matrix.java }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        java: ['17', '21']
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+          cache: maven
+      # -B batch mode, and skip tests: the generator's test skeletons assert
+      # nothing, and the thing under test here is that the published source
+      # compiles against its declared dependencies.
+      - run: mvn -B -DskipTests package
