@@ -4,30 +4,29 @@
     <groupId>co.maytes</groupId>
     <artifactId>maytes-api-client</artifactId>
     <packaging>jar</packaging>
-    <name>maytes-api-client</name>
-    <version>0.1.1</version>
-    <url>https://github.com/openapitools/openapi-generator</url>
-    <description>OpenAPI Java</description>
+    <name>Maytes API client</name>
+    <version>0.1.2</version>
+    <url>https://developers.maytes.co</url>
+    <description>Official Java client for the Maytes API — create, capture and cancel checkouts, with OAuth2 token management and webhook signature verification.</description>
     <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
-        <url>https://github.com/openapitools/openapi-generator</url>
+        <connection>scm:git:git@github.com:kttipay/maytes-api-client-java.git</connection>
+        <developerConnection>scm:git:git@github.com:kttipay/maytes-api-client-java.git</developerConnection>
+        <url>https://github.com/kttipay/maytes-api-client-java</url>
     </scm>
 
     <licenses>
         <license>
-            <name>Unlicense</name>
-            <url>http://unlicense.org</url>
+            <name>MIT</name>
+            <url>https://github.com/kttipay/maytes-api-client-java/blob/main/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <developers>
         <developer>
-            <name>OpenAPI-Generator Contributors</name>
-            <email>team@openapitools.org</email>
-            <organization>OpenAPITools.org</organization>
-            <organizationUrl>http://openapitools.org</organizationUrl>
+            <name>Maytes</name>
+            <organization>Maytes</organization>
+            <organizationUrl>https://developers.maytes.co</organizationUrl>
         </developer>
     </developers>
 
@@ -239,6 +238,17 @@
             <build>
                 <plugins>
                     <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.11.0</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <publishingServerId>central</publishingServerId>
+                            <autoPublish>true</autoPublish>
+                            <waitUntil>published</waitUntil>
+                        </configuration>
+                    </plugin>
+                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <version>3.2.1</version>
@@ -249,6 +259,12 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>

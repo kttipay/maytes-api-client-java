@@ -9,8 +9,12 @@ capture and cancel checkouts, and verify inbound webhook signatures.
 
 ## Install
 
-```bash
-Not published to a registry — see below.
+```xml
+<dependency>
+    <groupId>co.maytes</groupId>
+    <artifactId>maytes-api-client</artifactId>
+    <version>0.1.2</version>
+</dependency>
 ```
 
 ## Usage
@@ -31,16 +35,14 @@ WebhookVerifier.MaytesWebhookEvent event =
     WebhookVerifier.verify(rawBody, signatureHeader, signingSecret);
 ```
 
-## Installing
+## Gradle
 
-This artifact is **not on Maven Central**. Publishing there needs a Sonatype
-namespace verification for `co.maytes` (a DNS TXT record on the domain, or a
-move to `io.github.kttipay`) plus GPG-signed artifacts, none of which is in
-place yet.
+```groovy
+implementation "co.maytes:maytes-api-client:0.1.2"
+```
 
-Until then, consume it from source — clone at the tag you want and
-`mvn install`, or point a JitPack dependency at this repository. The tags here
-are the same version numbers the whole Maytes SDK family shares.'
+Every Maytes SDK shares one version number, so the tags in this repository match
+the releases of the PHP, Go, Ruby, Python, TypeScript and .NET clients.
 
 ### Verifying webhooks
 
