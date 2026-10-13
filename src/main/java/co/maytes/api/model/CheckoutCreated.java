@@ -68,7 +68,7 @@ public class CheckoutCreated {
 
   public static final String SERIALIZED_NAME_EXPIRES_AT = "expires_at";
   @SerializedName(SERIALIZED_NAME_EXPIRES_AT)
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   private OffsetDateTime expiresAt;
 
   public CheckoutCreated() {
@@ -131,7 +131,7 @@ public class CheckoutCreated {
   }
 
 
-  public CheckoutCreated expiresAt(@javax.annotation.Nonnull OffsetDateTime expiresAt) {
+  public CheckoutCreated expiresAt(@javax.annotation.Nullable OffsetDateTime expiresAt) {
     this.expiresAt = expiresAt;
     return this;
   }
@@ -140,12 +140,12 @@ public class CheckoutCreated {
    * Get expiresAt
    * @return expiresAt
    */
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   public OffsetDateTime getExpiresAt() {
     return expiresAt;
   }
 
-  public void setExpiresAt(@javax.annotation.Nonnull OffsetDateTime expiresAt) {
+  public void setExpiresAt(@javax.annotation.Nullable OffsetDateTime expiresAt) {
     this.expiresAt = expiresAt;
   }
 

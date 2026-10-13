@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'co.maytes'
-version = '0.1.3'
+version = '0.1.4'
 
 buildscript {
     repositories {
