@@ -13,7 +13,7 @@ capture and cancel checkouts, and verify inbound webhook signatures.
 <dependency>
     <groupId>co.maytes</groupId>
     <artifactId>maytes-api-client</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.5</version>
 </dependency>
 ```
 
@@ -38,7 +38,7 @@ WebhookVerifier.MaytesWebhookEvent event =
 ## Gradle
 
 ```groovy
-implementation "co.maytes:maytes-api-client:0.1.3"
+implementation "co.maytes:maytes-api-client:0.1.5"
 ```
 
 Every Maytes SDK shares one version number, so the tags in this repository match
