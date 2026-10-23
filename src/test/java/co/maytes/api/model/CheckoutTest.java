@@ -144,6 +144,14 @@ public class CheckoutTest {
     }
 
     /**
+     * Test the property 'remainingAmount'
+     */
+    @Test
+    public void remainingAmountTest() {
+        // TODO: test remainingAmount
+    }
+
+    /**
      * Test the property 'merchantProcessorFee'
      */
     @Test

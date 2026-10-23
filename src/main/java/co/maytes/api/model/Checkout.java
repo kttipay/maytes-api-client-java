@@ -117,6 +117,11 @@ public class Checkout {
   @javax.annotation.Nonnull
   private Integer refundedAmount;
 
+  public static final String SERIALIZED_NAME_REMAINING_AMOUNT = "remaining_amount";
+  @SerializedName(SERIALIZED_NAME_REMAINING_AMOUNT)
+  @javax.annotation.Nonnull
+  private Integer remainingAmount;
+
   public static final String SERIALIZED_NAME_MERCHANT_PROCESSOR_FEE = "merchant_processor_fee";
   @SerializedName(SERIALIZED_NAME_MERCHANT_PROCESSOR_FEE)
   @javax.annotation.Nonnull
@@ -383,6 +388,26 @@ public class Checkout {
   }
 
 
+  public Checkout remainingAmount(@javax.annotation.Nonnull Integer remainingAmount) {
+    this.remainingAmount = remainingAmount;
+    return this;
+  }
+
+  /**
+   * Get remainingAmount
+   * minimum: 0
+   * @return remainingAmount
+   */
+  @javax.annotation.Nonnull
+  public Integer getRemainingAmount() {
+    return remainingAmount;
+  }
+
+  public void setRemainingAmount(@javax.annotation.Nonnull Integer remainingAmount) {
+    this.remainingAmount = remainingAmount;
+  }
+
+
   public Checkout merchantProcessorFee(@javax.annotation.Nonnull Integer merchantProcessorFee) {
     this.merchantProcessorFee = merchantProcessorFee;
     return this;
@@ -465,6 +490,7 @@ public class Checkout {
         Objects.equals(this.currency, checkout.currency) &&
         Objects.equals(this.serviceFee, checkout.serviceFee) &&
         Objects.equals(this.refundedAmount, checkout.refundedAmount) &&
+        Objects.equals(this.remainingAmount, checkout.remainingAmount) &&
         Objects.equals(this.merchantProcessorFee, checkout.merchantProcessorFee) &&
         Objects.equals(this.merchantServiceFee, checkout.merchantServiceFee) &&
         Objects.equals(this.lastRefundAt, checkout.lastRefundAt);
@@ -472,7 +498,7 @@ public class Checkout {
 
   @Override
   public int hashCode() {
-    return Objects.hash(checkoutUuid, merchantOrderId, status, transactionRef, checkoutUrl, merchantExpiresAt, capturedAt, returnUrl, cancelUrl, amount, currency, serviceFee, refundedAmount, merchantProcessorFee, merchantServiceFee, lastRefundAt);
+    return Objects.hash(checkoutUuid, merchantOrderId, status, transactionRef, checkoutUrl, merchantExpiresAt, capturedAt, returnUrl, cancelUrl, amount, currency, serviceFee, refundedAmount, remainingAmount, merchantProcessorFee, merchantServiceFee, lastRefundAt);
   }
 
   @Override
@@ -492,6 +518,7 @@ public class Checkout {
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    serviceFee: ").append(toIndentedString(serviceFee)).append("\n");
     sb.append("    refundedAmount: ").append(toIndentedString(refundedAmount)).append("\n");
+    sb.append("    remainingAmount: ").append(toIndentedString(remainingAmount)).append("\n");
     sb.append("    merchantProcessorFee: ").append(toIndentedString(merchantProcessorFee)).append("\n");
     sb.append("    merchantServiceFee: ").append(toIndentedString(merchantServiceFee)).append("\n");
     sb.append("    lastRefundAt: ").append(toIndentedString(lastRefundAt)).append("\n");
@@ -513,10 +540,10 @@ public class Checkout {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("checkout_uuid", "merchant_order_id", "status", "transaction_ref", "checkout_url", "merchant_expires_at", "captured_at", "return_url", "cancel_url", "amount", "currency", "service_fee", "refunded_amount", "merchant_processor_fee", "merchant_service_fee", "last_refund_at"));
+    openapiFields = new HashSet<String>(Arrays.asList("checkout_uuid", "merchant_order_id", "status", "transaction_ref", "checkout_url", "merchant_expires_at", "captured_at", "return_url", "cancel_url", "amount", "currency", "service_fee", "refunded_amount", "remaining_amount", "merchant_processor_fee", "merchant_service_fee", "last_refund_at"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("checkout_uuid", "merchant_order_id", "status", "transaction_ref", "checkout_url", "merchant_expires_at", "captured_at", "return_url", "cancel_url", "amount", "currency", "service_fee", "refunded_amount", "merchant_processor_fee", "merchant_service_fee", "last_refund_at"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("checkout_uuid", "merchant_order_id", "status", "transaction_ref", "checkout_url", "merchant_expires_at", "captured_at", "return_url", "cancel_url", "amount", "currency", "service_fee", "refunded_amount", "remaining_amount", "merchant_processor_fee", "merchant_service_fee", "last_refund_at"));
   }
 
   /**

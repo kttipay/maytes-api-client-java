@@ -20,6 +20,7 @@
 |**currency** | **String** |  |  |
 |**serviceFee** | [**Fee**](Fee.md) |  |  |
 |**refundedAmount** | **Integer** |  |  |
+|**remainingAmount** | **Integer** |  |  |
 |**merchantProcessorFee** | **Integer** |  |  |
 |**merchantServiceFee** | **Integer** |  |  |
 |**lastRefundAt** | **OffsetDateTime** |  |  |
