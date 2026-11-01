@@ -15,6 +15,7 @@ package co.maytes.api.model;
 
 import co.maytes.api.model.CheckoutDiscount;
 import co.maytes.api.model.CheckoutFee;
+import co.maytes.api.model.CheckoutFriends;
 import co.maytes.api.model.CustomerData;
 import co.maytes.api.model.LineItem;
 import co.maytes.api.model.Tax;
@@ -159,6 +160,14 @@ public class CreateCheckoutRequestTest {
     @Test
     public void allocationModelTest() {
         // TODO: test allocationModel
+    }
+
+    /**
+     * Test the property 'friends'
+     */
+    @Test
+    public void friendsTest() {
+        // TODO: test friends
     }
 
 }

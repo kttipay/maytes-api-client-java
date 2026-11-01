@@ -125,6 +125,9 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CheckoutCreated.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CheckoutDiscount.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CheckoutFee.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CheckoutFriend.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CheckoutFriendItem.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CheckoutFriends.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CreateCheckout401Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CreateCheckout409Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CreateCheckout422Response.CustomTypeAdapterFactory());

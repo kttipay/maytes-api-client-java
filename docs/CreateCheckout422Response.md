@@ -19,6 +19,7 @@
 | Name | Value |
 |---- | -----|
 | INVALID_AMOUNT | &quot;invalid_amount&quot; |
+| INVALID_FRIENDS | &quot;invalid_friends&quot; |
 | AMOUNT_BELOW_MINIMUM | &quot;amount_below_minimum&quot; |
 | INVALID_AMOUNT_ARITHMETIC | &quot;invalid_amount_arithmetic&quot; |
 | CURRENCY_NOT_SUPPORTED | &quot;currency_not_supported&quot; |

@@ -19,6 +19,9 @@ docs/CheckoutCaptured.md
 docs/CheckoutCreated.md
 docs/CheckoutDiscount.md
 docs/CheckoutFee.md
+docs/CheckoutFriend.md
+docs/CheckoutFriendItem.md
+docs/CheckoutFriends.md
 docs/CreateCheckout401Response.md
 docs/CreateCheckout409Response.md
 docs/CreateCheckout422Response.md
@@ -96,6 +99,9 @@ src/main/java/co/maytes/api/model/CheckoutCaptured.java
 src/main/java/co/maytes/api/model/CheckoutCreated.java
 src/main/java/co/maytes/api/model/CheckoutDiscount.java
 src/main/java/co/maytes/api/model/CheckoutFee.java
+src/main/java/co/maytes/api/model/CheckoutFriend.java
+src/main/java/co/maytes/api/model/CheckoutFriendItem.java
+src/main/java/co/maytes/api/model/CheckoutFriends.java
 src/main/java/co/maytes/api/model/CreateCheckout401Response.java
 src/main/java/co/maytes/api/model/CreateCheckout409Response.java
 src/main/java/co/maytes/api/model/CreateCheckout422Response.java
@@ -144,6 +150,9 @@ src/test/java/co/maytes/api/model/CheckoutCapturedTest.java
 src/test/java/co/maytes/api/model/CheckoutCreatedTest.java
 src/test/java/co/maytes/api/model/CheckoutDiscountTest.java
 src/test/java/co/maytes/api/model/CheckoutFeeTest.java
+src/test/java/co/maytes/api/model/CheckoutFriendItemTest.java
+src/test/java/co/maytes/api/model/CheckoutFriendTest.java
+src/test/java/co/maytes/api/model/CheckoutFriendsTest.java
 src/test/java/co/maytes/api/model/CheckoutTest.java
 src/test/java/co/maytes/api/model/CreateCheckout401ResponseTest.java
 src/test/java/co/maytes/api/model/CreateCheckout409ResponseTest.java

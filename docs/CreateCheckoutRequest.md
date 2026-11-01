@@ -21,6 +21,7 @@
 |**customerData** | [**CustomerData**](CustomerData.md) |  |  [optional] |
 |**metadata** | **Map&lt;String, Object&gt;** |  |  [optional] |
 |**allocationModel** | [**AllocationModelEnum**](#AllocationModelEnum) |  |  [optional] |
+|**friends** | [**CheckoutFriends**](CheckoutFriends.md) | Who the customer is expected to split with. Pre-fills their share and allocation screens; the customer can still change it. Personal data — send it only when you hold it. |  [optional] |
 
 
 

@@ -69,6 +69,8 @@ public class CreateCheckout422Response {
   public enum CodeEnum {
     INVALID_AMOUNT("invalid_amount"),
     
+    INVALID_FRIENDS("invalid_friends"),
+    
     AMOUNT_BELOW_MINIMUM("amount_below_minimum"),
     
     INVALID_AMOUNT_ARITHMETIC("invalid_amount_arithmetic"),

@@ -16,6 +16,7 @@ package co.maytes.api.model;
 import java.util.Objects;
 import co.maytes.api.model.CheckoutDiscount;
 import co.maytes.api.model.CheckoutFee;
+import co.maytes.api.model.CheckoutFriends;
 import co.maytes.api.model.CustomerData;
 import co.maytes.api.model.LineItem;
 import co.maytes.api.model.Tax;
@@ -183,6 +184,11 @@ public class CreateCheckoutRequest {
   @SerializedName(SERIALIZED_NAME_ALLOCATION_MODEL)
   @javax.annotation.Nullable
   private AllocationModelEnum allocationModel;
+
+  public static final String SERIALIZED_NAME_FRIENDS = "friends";
+  @SerializedName(SERIALIZED_NAME_FRIENDS)
+  @javax.annotation.Nullable
+  private CheckoutFriends friends;
 
   public CreateCheckoutRequest() {
   }
@@ -487,6 +493,25 @@ public class CreateCheckoutRequest {
   }
 
 
+  public CreateCheckoutRequest friends(@javax.annotation.Nullable CheckoutFriends friends) {
+    this.friends = friends;
+    return this;
+  }
+
+  /**
+   * Who the customer is expected to split with. Pre-fills their share and allocation screens; the customer can still change it. Personal data — send it only when you hold it.
+   * @return friends
+   */
+  @javax.annotation.Nullable
+  public CheckoutFriends getFriends() {
+    return friends;
+  }
+
+  public void setFriends(@javax.annotation.Nullable CheckoutFriends friends) {
+    this.friends = friends;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -510,7 +535,8 @@ public class CreateCheckoutRequest {
         Objects.equals(this.shippingAmount, createCheckoutRequest.shippingAmount) &&
         Objects.equals(this.customerData, createCheckoutRequest.customerData) &&
         Objects.equals(this.metadata, createCheckoutRequest.metadata) &&
-        Objects.equals(this.allocationModel, createCheckoutRequest.allocationModel);
+        Objects.equals(this.allocationModel, createCheckoutRequest.allocationModel) &&
+        Objects.equals(this.friends, createCheckoutRequest.friends);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -519,7 +545,7 @@ public class CreateCheckoutRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(merchantOrderId, merchantExpiresAt, totalAmount, currency, returnUrl, cancelUrl, items, fees, discounts, tax, shippingAmount, customerData, metadata, allocationModel);
+    return Objects.hash(merchantOrderId, merchantExpiresAt, totalAmount, currency, returnUrl, cancelUrl, items, fees, discounts, tax, shippingAmount, customerData, metadata, allocationModel, friends);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -547,6 +573,7 @@ public class CreateCheckoutRequest {
     sb.append("    customerData: ").append(toIndentedString(customerData)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    allocationModel: ").append(toIndentedString(allocationModel)).append("\n");
+    sb.append("    friends: ").append(toIndentedString(friends)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -565,7 +592,7 @@ public class CreateCheckoutRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("merchant_order_id", "merchant_expires_at", "total_amount", "currency", "return_url", "cancel_url", "items", "fees", "discounts", "tax", "shipping_amount", "customer_data", "metadata", "allocation_model"));
+    openapiFields = new HashSet<String>(Arrays.asList("merchant_order_id", "merchant_expires_at", "total_amount", "currency", "return_url", "cancel_url", "items", "fees", "discounts", "tax", "shipping_amount", "customer_data", "metadata", "allocation_model", "friends"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("total_amount", "currency", "return_url", "cancel_url", "items"));
@@ -663,6 +690,10 @@ public class CreateCheckoutRequest {
       // validate the optional field `allocation_model`
       if (jsonObj.get("allocation_model") != null && !jsonObj.get("allocation_model").isJsonNull()) {
         AllocationModelEnum.validateJsonElement(jsonObj.get("allocation_model"));
+      }
+      // validate the optional field `friends`
+      if (jsonObj.get("friends") != null && !jsonObj.get("friends").isJsonNull()) {
+        CheckoutFriends.validateJsonElement(jsonObj.get("friends"));
       }
   }
 
