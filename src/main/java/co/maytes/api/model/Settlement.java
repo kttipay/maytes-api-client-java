@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.Arrays;
-import java.util.UUID;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,12 +54,12 @@ public class Settlement {
   public static final String SERIALIZED_NAME_UUID = "uuid";
   @SerializedName(SERIALIZED_NAME_UUID)
   @javax.annotation.Nonnull
-  private UUID uuid;
+  private String uuid;
 
   public static final String SERIALIZED_NAME_MERCHANT_UUID = "merchant_uuid";
   @SerializedName(SERIALIZED_NAME_MERCHANT_UUID)
   @javax.annotation.Nonnull
-  private UUID merchantUuid;
+  private String merchantUuid;
 
   public static final String SERIALIZED_NAME_PERIOD_FROM = "period_from";
   @SerializedName(SERIALIZED_NAME_PERIOD_FROM)
@@ -120,7 +119,7 @@ public class Settlement {
   public static final String SERIALIZED_NAME_REVIEWED_BY_USER_UUID = "reviewed_by_user_uuid";
   @SerializedName(SERIALIZED_NAME_REVIEWED_BY_USER_UUID)
   @javax.annotation.Nullable
-  private UUID reviewedByUserUuid;
+  private String reviewedByUserUuid;
 
   public static final String SERIALIZED_NAME_REVIEWED_AT = "reviewed_at";
   @SerializedName(SERIALIZED_NAME_REVIEWED_AT)
@@ -145,7 +144,7 @@ public class Settlement {
   public Settlement() {
   }
 
-  public Settlement uuid(@javax.annotation.Nonnull UUID uuid) {
+  public Settlement uuid(@javax.annotation.Nonnull String uuid) {
     this.uuid = uuid;
     return this;
   }
@@ -155,16 +154,16 @@ public class Settlement {
    * @return uuid
    */
   @javax.annotation.Nonnull
-  public UUID getUuid() {
+  public String getUuid() {
     return uuid;
   }
 
-  public void setUuid(@javax.annotation.Nonnull UUID uuid) {
+  public void setUuid(@javax.annotation.Nonnull String uuid) {
     this.uuid = uuid;
   }
 
 
-  public Settlement merchantUuid(@javax.annotation.Nonnull UUID merchantUuid) {
+  public Settlement merchantUuid(@javax.annotation.Nonnull String merchantUuid) {
     this.merchantUuid = merchantUuid;
     return this;
   }
@@ -174,11 +173,11 @@ public class Settlement {
    * @return merchantUuid
    */
   @javax.annotation.Nonnull
-  public UUID getMerchantUuid() {
+  public String getMerchantUuid() {
     return merchantUuid;
   }
 
-  public void setMerchantUuid(@javax.annotation.Nonnull UUID merchantUuid) {
+  public void setMerchantUuid(@javax.annotation.Nonnull String merchantUuid) {
     this.merchantUuid = merchantUuid;
   }
 
@@ -392,7 +391,7 @@ public class Settlement {
   }
 
 
-  public Settlement reviewedByUserUuid(@javax.annotation.Nullable UUID reviewedByUserUuid) {
+  public Settlement reviewedByUserUuid(@javax.annotation.Nullable String reviewedByUserUuid) {
     this.reviewedByUserUuid = reviewedByUserUuid;
     return this;
   }
@@ -402,11 +401,11 @@ public class Settlement {
    * @return reviewedByUserUuid
    */
   @javax.annotation.Nullable
-  public UUID getReviewedByUserUuid() {
+  public String getReviewedByUserUuid() {
     return reviewedByUserUuid;
   }
 
-  public void setReviewedByUserUuid(@javax.annotation.Nullable UUID reviewedByUserUuid) {
+  public void setReviewedByUserUuid(@javax.annotation.Nullable String reviewedByUserUuid) {
     this.reviewedByUserUuid = reviewedByUserUuid;
   }
 

@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**uuid** | **UUID** |  |  |
-|**merchantUuid** | **UUID** |  |  |
+|**uuid** | **String** |  |  |
+|**merchantUuid** | **String** |  |  |
 |**periodFrom** | **OffsetDateTime** |  |  |
 |**periodTo** | **OffsetDateTime** |  |  |
 |**idempotencyKey** | **String** |  |  |
@@ -20,7 +20,7 @@
 |**notes** | **String** |  |  |
 |**settledAt** | **OffsetDateTime** |  |  |
 |**expiresAt** | **OffsetDateTime** |  |  |
-|**reviewedByUserUuid** | **UUID** |  |  |
+|**reviewedByUserUuid** | **String** |  |  |
 |**reviewedAt** | **OffsetDateTime** |  |  |
 |**rejectionReason** | **String** |  |  |
 |**createdAt** | **OffsetDateTime** |  |  |
