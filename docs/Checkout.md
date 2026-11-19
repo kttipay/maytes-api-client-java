@@ -10,7 +10,7 @@
 |**checkoutUuid** | **String** |  |  |
 |**merchantOrderId** | **String** |  |  |
 |**status** | **String** |  |  |
-|**transactionRef** | **String** |  |  |
+|**transactionRef** | **String** | Always null. Will be removed in a future API version. |  |
 |**checkoutUrl** | **String** |  |  |
 |**merchantExpiresAt** | **OffsetDateTime** |  |  |
 |**capturedAt** | **OffsetDateTime** |  |  |

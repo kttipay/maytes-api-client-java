@@ -67,7 +67,9 @@ public class RefundCheckout409Response {
    */
   @JsonAdapter(CodeEnum.Adapter.class)
   public enum CodeEnum {
-    NOT_REFUNDABLE("not_refundable");
+    NOT_REFUNDABLE("not_refundable"),
+    
+    PAYMENT_HAS_CHARGEBACK("payment_has_chargeback");
 
     private String value;
 

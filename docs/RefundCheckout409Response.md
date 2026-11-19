@@ -19,6 +19,7 @@
 | Name | Value |
 |---- | -----|
 | NOT_REFUNDABLE | &quot;not_refundable&quot; |
+| PAYMENT_HAS_CHARGEBACK | &quot;payment_has_chargeback&quot; |
 
 
 

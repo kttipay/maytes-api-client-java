@@ -203,7 +203,7 @@ public class Checkout {
   }
 
   /**
-   * Get transactionRef
+   * Always null. Will be removed in a future API version.
    * @return transactionRef
    */
   @javax.annotation.Nullable
