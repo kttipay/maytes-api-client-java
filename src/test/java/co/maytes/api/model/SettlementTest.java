@@ -13,6 +13,7 @@
 
 package co.maytes.api.model;
 
+import co.maytes.api.model.SettlementUpsell;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -164,6 +165,14 @@ public class SettlementTest {
     @Test
     public void rejectionReasonTest() {
         // TODO: test rejectionReason
+    }
+
+    /**
+     * Test the property 'upsell'
+     */
+    @Test
+    public void upsellTest() {
+        // TODO: test upsell
     }
 
     /**

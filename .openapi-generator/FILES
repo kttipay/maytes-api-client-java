@@ -23,6 +23,7 @@ docs/CheckoutFriend.md
 docs/CheckoutFriendItem.md
 docs/CheckoutFriends.md
 docs/CreateCheckout401Response.md
+docs/CreateCheckout403Response.md
 docs/CreateCheckout409Response.md
 docs/CreateCheckout422Response.md
 docs/CreateCheckoutRequest.md
@@ -54,6 +55,7 @@ docs/RefundCheckout409Response.md
 docs/ServiceCustomData.md
 docs/ServiceLineItem.md
 docs/Settlement.md
+docs/SettlementUpsell.md
 docs/Tax.md
 docs/TicketCustomData.md
 docs/TicketLineItem.md
@@ -103,6 +105,7 @@ src/main/java/co/maytes/api/model/CheckoutFriend.java
 src/main/java/co/maytes/api/model/CheckoutFriendItem.java
 src/main/java/co/maytes/api/model/CheckoutFriends.java
 src/main/java/co/maytes/api/model/CreateCheckout401Response.java
+src/main/java/co/maytes/api/model/CreateCheckout403Response.java
 src/main/java/co/maytes/api/model/CreateCheckout409Response.java
 src/main/java/co/maytes/api/model/CreateCheckout422Response.java
 src/main/java/co/maytes/api/model/CreateCheckoutRequest.java
@@ -133,6 +136,7 @@ src/main/java/co/maytes/api/model/RefundCheckout409Response.java
 src/main/java/co/maytes/api/model/ServiceCustomData.java
 src/main/java/co/maytes/api/model/ServiceLineItem.java
 src/main/java/co/maytes/api/model/Settlement.java
+src/main/java/co/maytes/api/model/SettlementUpsell.java
 src/main/java/co/maytes/api/model/Tax.java
 src/main/java/co/maytes/api/model/TicketCustomData.java
 src/main/java/co/maytes/api/model/TicketLineItem.java
@@ -155,6 +159,7 @@ src/test/java/co/maytes/api/model/CheckoutFriendTest.java
 src/test/java/co/maytes/api/model/CheckoutFriendsTest.java
 src/test/java/co/maytes/api/model/CheckoutTest.java
 src/test/java/co/maytes/api/model/CreateCheckout401ResponseTest.java
+src/test/java/co/maytes/api/model/CreateCheckout403ResponseTest.java
 src/test/java/co/maytes/api/model/CreateCheckout409ResponseTest.java
 src/test/java/co/maytes/api/model/CreateCheckout422ResponseTest.java
 src/test/java/co/maytes/api/model/CreateCheckoutRequestTest.java
@@ -185,6 +190,7 @@ src/test/java/co/maytes/api/model/RefundCheckout409ResponseTest.java
 src/test/java/co/maytes/api/model/ServiceCustomDataTest.java
 src/test/java/co/maytes/api/model/ServiceLineItemTest.java
 src/test/java/co/maytes/api/model/SettlementTest.java
+src/test/java/co/maytes/api/model/SettlementUpsellTest.java
 src/test/java/co/maytes/api/model/TaxTest.java
 src/test/java/co/maytes/api/model/TicketCustomDataTest.java
 src/test/java/co/maytes/api/model/TicketLineItemTest.java

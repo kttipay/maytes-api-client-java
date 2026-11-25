@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "co.maytes",
     name := "maytes-api-client",
-    version := "0.3.0",
+    version := "0.4.0",
     scalaVersion := "2.11.12",
     scalacOptions ++= Seq("-feature"),
     compile / javacOptions ++= Seq("-Xlint:deprecation"),

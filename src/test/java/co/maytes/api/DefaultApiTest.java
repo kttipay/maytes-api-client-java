@@ -22,6 +22,7 @@ import co.maytes.api.model.CaptureCheckout422Response;
 import co.maytes.api.model.CaptureCheckoutRequest;
 import co.maytes.api.model.CaptureCheckoutResponse;
 import co.maytes.api.model.CreateCheckout401Response;
+import co.maytes.api.model.CreateCheckout403Response;
 import co.maytes.api.model.CreateCheckout409Response;
 import co.maytes.api.model.CreateCheckout422Response;
 import co.maytes.api.model.CreateCheckoutRequest;

@@ -14,6 +14,7 @@
 package co.maytes.api.model;
 
 import java.util.Objects;
+import co.maytes.api.model.SettlementUpsell;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -130,6 +131,11 @@ public class Settlement {
   @SerializedName(SERIALIZED_NAME_REJECTION_REASON)
   @javax.annotation.Nullable
   private String rejectionReason;
+
+  public static final String SERIALIZED_NAME_UPSELL = "upsell";
+  @SerializedName(SERIALIZED_NAME_UPSELL)
+  @javax.annotation.Nullable
+  private SettlementUpsell upsell;
 
   public static final String SERIALIZED_NAME_CREATED_AT = "created_at";
   @SerializedName(SERIALIZED_NAME_CREATED_AT)
@@ -448,6 +454,25 @@ public class Settlement {
   }
 
 
+  public Settlement upsell(@javax.annotation.Nullable SettlementUpsell upsell) {
+    this.upsell = upsell;
+    return this;
+  }
+
+  /**
+   * Get upsell
+   * @return upsell
+   */
+  @javax.annotation.Nullable
+  public SettlementUpsell getUpsell() {
+    return upsell;
+  }
+
+  public void setUpsell(@javax.annotation.Nullable SettlementUpsell upsell) {
+    this.upsell = upsell;
+  }
+
+
   public Settlement createdAt(@javax.annotation.Nonnull OffsetDateTime createdAt) {
     this.createdAt = createdAt;
     return this;
@@ -512,13 +537,14 @@ public class Settlement {
         Objects.equals(this.reviewedByUserUuid, settlement.reviewedByUserUuid) &&
         Objects.equals(this.reviewedAt, settlement.reviewedAt) &&
         Objects.equals(this.rejectionReason, settlement.rejectionReason) &&
+        Objects.equals(this.upsell, settlement.upsell) &&
         Objects.equals(this.createdAt, settlement.createdAt) &&
         Objects.equals(this.updatedAt, settlement.updatedAt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(uuid, merchantUuid, periodFrom, periodTo, idempotencyKey, merchantPayableAmount, settledAmount, currency, status, stripeTransferId, notes, settledAt, expiresAt, reviewedByUserUuid, reviewedAt, rejectionReason, createdAt, updatedAt);
+    return Objects.hash(uuid, merchantUuid, periodFrom, periodTo, idempotencyKey, merchantPayableAmount, settledAmount, currency, status, stripeTransferId, notes, settledAt, expiresAt, reviewedByUserUuid, reviewedAt, rejectionReason, upsell, createdAt, updatedAt);
   }
 
   @Override
@@ -541,6 +567,7 @@ public class Settlement {
     sb.append("    reviewedByUserUuid: ").append(toIndentedString(reviewedByUserUuid)).append("\n");
     sb.append("    reviewedAt: ").append(toIndentedString(reviewedAt)).append("\n");
     sb.append("    rejectionReason: ").append(toIndentedString(rejectionReason)).append("\n");
+    sb.append("    upsell: ").append(toIndentedString(upsell)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("}");
@@ -561,10 +588,10 @@ public class Settlement {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("uuid", "merchant_uuid", "period_from", "period_to", "idempotency_key", "merchant_payable_amount", "settled_amount", "currency", "status", "stripe_transfer_id", "notes", "settled_at", "expires_at", "reviewed_by_user_uuid", "reviewed_at", "rejection_reason", "created_at", "updated_at"));
+    openapiFields = new HashSet<String>(Arrays.asList("uuid", "merchant_uuid", "period_from", "period_to", "idempotency_key", "merchant_payable_amount", "settled_amount", "currency", "status", "stripe_transfer_id", "notes", "settled_at", "expires_at", "reviewed_by_user_uuid", "reviewed_at", "rejection_reason", "upsell", "created_at", "updated_at"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("uuid", "merchant_uuid", "period_from", "period_to", "idempotency_key", "merchant_payable_amount", "settled_amount", "currency", "status", "stripe_transfer_id", "notes", "settled_at", "expires_at", "reviewed_by_user_uuid", "reviewed_at", "rejection_reason", "created_at", "updated_at"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("uuid", "merchant_uuid", "period_from", "period_to", "idempotency_key", "merchant_payable_amount", "settled_amount", "currency", "status", "stripe_transfer_id", "notes", "settled_at", "expires_at", "reviewed_by_user_uuid", "reviewed_at", "rejection_reason", "upsell", "created_at", "updated_at"));
   }
 
   /**
@@ -621,6 +648,10 @@ public class Settlement {
       }
       if ((jsonObj.get("rejection_reason") != null && !jsonObj.get("rejection_reason").isJsonNull()) && !jsonObj.get("rejection_reason").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format(java.util.Locale.ROOT, "Expected the field `rejection_reason` to be a primitive type in the JSON string but got `%s`", jsonObj.get("rejection_reason").toString()));
+      }
+      if (jsonObj.get("upsell") != null && !jsonObj.get("upsell").isJsonNull()) {
+      // validate the required field `upsell`
+      SettlementUpsell.validateJsonElement(jsonObj.get("upsell"));
       }
   }
 

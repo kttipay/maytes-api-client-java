@@ -35,6 +35,7 @@ import co.maytes.api.model.CaptureCheckout422Response;
 import co.maytes.api.model.CaptureCheckoutRequest;
 import co.maytes.api.model.CaptureCheckoutResponse;
 import co.maytes.api.model.CreateCheckout401Response;
+import co.maytes.api.model.CreateCheckout403Response;
 import co.maytes.api.model.CreateCheckout409Response;
 import co.maytes.api.model.CreateCheckout422Response;
 import co.maytes.api.model.CreateCheckoutRequest;
@@ -412,6 +413,7 @@ public class DefaultApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 409 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 422 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -484,6 +486,7 @@ public class DefaultApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 409 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 422 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -505,6 +508,7 @@ public class DefaultApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 409 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 422 </td><td>  </td><td>  -  </td></tr>
      </table>
@@ -528,6 +532,7 @@ public class DefaultApi {
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 401 </td><td>  </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 409 </td><td>  </td><td>  -  </td></tr>
         <tr><td> 422 </td><td>  </td><td>  -  </td></tr>
      </table>

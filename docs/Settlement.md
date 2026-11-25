@@ -23,6 +23,7 @@
 |**reviewedByUserUuid** | **String** |  |  |
 |**reviewedAt** | **OffsetDateTime** |  |  |
 |**rejectionReason** | **String** |  |  |
+|**upsell** | [**SettlementUpsell**](SettlementUpsell.md) |  |  |
 |**createdAt** | **OffsetDateTime** |  |  |
 |**updatedAt** | **OffsetDateTime** |  |  |
 

@@ -129,6 +129,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CheckoutFriendItem.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CheckoutFriends.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CreateCheckout401Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CreateCheckout403Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CreateCheckout409Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CreateCheckout422Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.CreateCheckoutRequest.CustomTypeAdapterFactory());
@@ -159,6 +160,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.ServiceCustomData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.ServiceLineItem.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.Settlement.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.SettlementUpsell.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.Tax.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.TicketCustomData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new co.maytes.api.model.TicketLineItem.CustomTypeAdapterFactory());
